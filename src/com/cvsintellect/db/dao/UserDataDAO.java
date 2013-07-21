@@ -110,7 +110,7 @@ public class UserDataDAO extends AbstractDAO {
 	}
 
 	@SuppressWarnings("unchecked")
-	private boolean hasUserByEmailId(String emailId) throws Exception {
+	public boolean hasUserByEmailId(String emailId) throws Exception {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 
 		Query q = pm.newQuery(UserDTO.class, "username == :username");

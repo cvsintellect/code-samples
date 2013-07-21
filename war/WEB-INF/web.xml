@@ -8,7 +8,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<!-- Filters -->
 	<filter>
 		<filter-name>FileFilter</filter-name>
-		<filter-class>com.cvsintellect.servlet.filter.FileFilter</filter-class>
+		<filter-class>com.cvsintellect.servlet.filter.UserFilter</filter-class>
 	</filter>
 
 	<filter-mapping>

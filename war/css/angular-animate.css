@@ -1,0 +1,38 @@
+.repeat-enter-setup,.repeat-leave-setup {
+	-webkit-transition: all linear 1s;
+	-moz-transition: all linear 1s;
+	-ms-transition: all linear 1s;
+	-o-transition: all linear 1s;
+	transition: all linear 1s;
+}
+
+.repeat-enter-setup {
+	position: relative;
+	opacity: 0;
+}
+
+.repeat-enter-setup.repeat-enter-start {
+	opacity: 1;
+}
+
+.repeat-leave-setup {
+	position: relative;
+	opacity: 1;
+}
+
+.repeat-leave-setup.repeat-leave-start {
+	opacity: 0;
+}
+
+.repeat-move-setup {
+	-webkit-transition: all linear 1s;
+	-moz-transition: all linear 1s;
+	-ms-transition: all linear 1s;
+	-o-transition: all linear 1s;
+	transition: all linear 1s;
+	background-color:#ededed;
+}
+
+.repeat-move-setup.repeat-move-start {
+	background-color:white;
+}

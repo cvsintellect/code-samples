@@ -1,7 +1,6 @@
 package com.cvsintellect.servlet.user;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -13,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.dao.AbstractDAO;
 import com.cvsintellect.db.dao.UserDataDAO;
-import com.cvsintellect.db.model.EntryDTO;
 import com.cvsintellect.db.model.UserDTO;
 import com.cvsintellect.servlet.constants.KeyConstants;
 import com.google.appengine.api.datastore.Key;
@@ -38,9 +36,8 @@ public class GetUserData extends HttpServlet {
 		try {
 			UserDTO userData = new UserDataDAO(new CacheService()).getUserDataByKey(userKey);
 			AbstractDAO.unlinkUser(userData);
-			List<EntryDTO> entries = userData.getEntries();
 
-			AjaxResponse.writeOutput(response, new Gson().toJson(entries), "application/json");
+			AjaxResponse.writeOutput(response, new Gson().toJson(userData), "application/json");
 			return;
 		}
 		catch (Exception e) {

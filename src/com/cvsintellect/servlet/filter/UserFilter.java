@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.dao.UserDataDAO;
+import com.cvsintellect.db.model.UserDTO;
 import com.cvsintellect.servlet.constants.KeyConstants;
 import com.cvsintellect.servlet.constants.PageConstants;
 import com.google.appengine.api.datastore.Key;
@@ -43,7 +44,16 @@ public final class UserFilter implements Filter {
 		// create user if doesn't exist
 		if (session.getAttribute(KeyConstants.USER_ID.toString()) == null) {
 			try {
-				Key userKey = new UserDataDAO(new CacheService()).createNewUser("test@test.com");
+				UserDataDAO userDataDAO = new UserDataDAO(new CacheService());
+				String emailId = "test@test.com";
+				Key userKey = null;
+				if (userDataDAO.hasUserByEmailId(emailId)) {
+					UserDTO userDTO = userDataDAO.getUserByEmailId(emailId);
+					userKey = userDTO.getKey();
+				}
+				else {
+					userKey = userDataDAO.createNewUser(emailId);
+				}
 				session.setAttribute(KeyConstants.USER_ID.toString(), userKey);
 			}
 			catch (Exception e) {
