@@ -83,10 +83,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>RestAPIDelete</servlet-name>
 		<url-pattern>/user/delete/*</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
 
-		<!-- welcome list -->
-		<welcome-file-list>
-			<welcome-file>welcome</welcome-file>
-		</welcome-file-list>
+	<!-- welcome list -->
+	<welcome-file-list>
+		<welcome-file>welcome</welcome-file>
+	</welcome-file-list>
 </web-app>
