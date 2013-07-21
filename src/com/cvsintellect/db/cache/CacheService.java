@@ -1,4 +1,4 @@
-package com.ji.rm.db.cache;
+package com.cvsintellect.db.cache;
 
 import java.util.HashMap;
 import java.util.Map;

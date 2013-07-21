@@ -8,10 +8,10 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+import com.cvsintellect.db.cache.CacheService;
+import com.cvsintellect.db.dao.migrator.UserDataMigrator;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Key;
-import com.ji.rm.db.cache.CacheService;
-import com.ji.rm.db.dao.migrator.UserDataMigrator;
 
 public class UserDAOTest extends AbstractDAOTestHelper {
 	private static final String EMAIL_ID = "first.lastname@test.com";

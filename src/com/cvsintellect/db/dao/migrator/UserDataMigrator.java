@@ -1,4 +1,4 @@
-package com.ji.rm.db.dao.migrator;
+package com.cvsintellect.db.dao.migrator;
 
 import java.util.logging.Logger;
 

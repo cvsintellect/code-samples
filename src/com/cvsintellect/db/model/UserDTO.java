@@ -11,8 +11,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.cvsintellect.db.dao.migrator.UserDataMigrator;
 import com.google.appengine.api.datastore.Key;
-import com.ji.rm.db.dao.migrator.UserDataMigrator;
 
 @PersistenceCapable
 public class UserDTO extends AbstractDTO implements Serializable {

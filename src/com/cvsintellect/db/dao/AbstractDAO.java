@@ -5,11 +5,11 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 
 import com.cvsintellect.common.util.DigestUtil;
+import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.model.EntryDTO;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import com.ji.rm.db.cache.CacheService;
 
 public abstract class AbstractDAO {
 	protected CacheService cacheService;
@@ -35,6 +35,16 @@ public abstract class AbstractDAO {
 			for (EntryDTO entry : entries) {
 				keyDigest = DigestUtil.getDigestFor(KeyFactory.keyToString(entry.getKey()));
 				entry.setKeyDigest(keyDigest);
+			}
+		}
+	}
+
+	public static void unlinkUser(UserDTO userData) {
+		userData.setKey(null);
+		List<EntryDTO> entries = userData.getEntries();
+		if (entries != null) {
+			for (EntryDTO current : entries) {
+				current.setKey(null);
 			}
 		}
 	}

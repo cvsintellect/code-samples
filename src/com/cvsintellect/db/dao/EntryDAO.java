@@ -8,11 +8,11 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Transaction;
 
 import com.cvsintellect.common.util.DigestUtil;
+import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.model.EntryDTO;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import com.ji.rm.db.cache.CacheService;
 import com.ji.rm.servlet.util.GAELogger;
 
 public class EntryDAO extends AbstractDAO {

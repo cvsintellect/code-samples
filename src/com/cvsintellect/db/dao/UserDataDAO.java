@@ -11,13 +11,13 @@ import javax.jdo.Transaction;
 
 import com.cvsintellect.common.util.DataValidationUtil;
 import com.cvsintellect.common.util.DigestUtil;
+import com.cvsintellect.db.cache.CacheService;
+import com.cvsintellect.db.dao.migrator.UserDataMigrator;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
-import com.ji.rm.db.cache.CacheService;
-import com.ji.rm.db.dao.migrator.UserDataMigrator;
 import com.ji.rm.servlet.util.GAELogger;
 import com.ji.rm.servlet.util.UserQuery;
 

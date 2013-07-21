@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.junit.After;
 import org.junit.Before;
 
+import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.ji.rm.db.cache.CacheService;
 
 public abstract class AbstractDAOTestHelper {
 	private final LocalServiceTestHelper helper = new LocalServiceTestHelper(

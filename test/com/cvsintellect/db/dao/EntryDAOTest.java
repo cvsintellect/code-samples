@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.junit.Test;
 
+import com.cvsintellect.db.cache.CacheService;
+import com.cvsintellect.db.dao.migrator.UserDataMigrator;
 import com.cvsintellect.db.model.EntryDTO;
 import com.cvsintellect.db.model.UserDTO;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.Text;
-import com.ji.rm.db.cache.CacheService;
-import com.ji.rm.db.dao.migrator.UserDataMigrator;
 
 public class EntryDAOTest extends AbstractDAOTestHelper {
 	private static final String EMAIL_ID = "first.lastname@test.com";
