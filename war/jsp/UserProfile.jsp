@@ -41,9 +41,9 @@
 
 	<script src="/ckeditor/ckeditor.js" type="text/javascript"></script>
 
-	<script src="/js/angularjs/app.js" type="text/javascript"></script>
-	<script src="/js/angularjs/services.js" type="text/javascript"></script>
-	<script src="/js/angularjs/user-controller.js" type="text/javascript"></script>
-	<script src="/js/angularjs/entry-controller.js" type="text/javascript"></script>
+	<script src="/js/application/app.js" type="text/javascript"></script>
+	<script src="/js/application/services.js" type="text/javascript"></script>
+	<script src="/js/application/user-controller.js" type="text/javascript"></script>
+	<script src="/js/application/entry-controller.js" type="text/javascript"></script>
 </body>
 </html>
