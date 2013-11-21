@@ -26,10 +26,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-class>com.cvsintellect.servlet.user.GetUserData</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>ProfilePartial</servlet-name>
-		<servlet-class>com.cvsintellect.servlet.user.Partial</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>RestAPIRead</servlet-name>
 		<servlet-class>com.cvsintellect.servlet.user.Read</servlet-class>
 	</servlet>
@@ -58,10 +54,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>getuserdata</servlet-name>
 		<url-pattern>/user/getuserdata</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ProfilePartial</servlet-name>
-		<url-pattern>/user/partial/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>RestAPIRead</servlet-name>

@@ -2,7 +2,7 @@ var app = angular.module('CVsIntellect', [ 'ui.bootstrap', 'placeholderShim', 'C
 
 app.config(function($routeProvider) {
 	$routeProvider.when("/", {
-		templateUrl : "/user/partial/profile",
+		templateUrl : "/static/angularjs/partials/UserEntries.html",
 		controller : UserController,
 		resolve : {
 			userProfileData : function($q, $route, UserService) {
@@ -23,6 +23,28 @@ app.config(function($routeProvider) {
 		}
 	});
 });
+
+app.factory('debounce', [ '$timeout', function($timeout) {
+	function debounce(fn, timeout, apply) {
+		timeout = angular.isUndefined(timeout) ? 0 : timeout;
+		apply = angular.isUndefined(apply) ? true : apply; // !!default is true! most suitable to my experience
+		var nthCall = 0;
+		return function() { // intercepting fn
+			var that = this;
+			var argz = arguments;
+			nthCall++;
+			var later = (function(version) {
+				return function() {
+					if (version === nthCall) {
+						return fn.apply(that, argz);
+					}
+				};
+			})(nthCall);
+			return $timeout(later, timeout, apply);
+		};
+	}
+	return debounce;
+} ]);
 
 app.directive('contenteditable', function() {
 	return {
@@ -55,6 +77,22 @@ app.directive('contenteditable', function() {
 
 			// load init value from DOM
 			ctrl.$render();
+		}
+	};
+});
+
+app.directive('autosavable', function(debounce) {
+	return {
+		restrict : 'A',
+		require : '?ngModel',
+		link : function(scope, element, attrs, ngModel) {
+			var debounced = debounce(function() {
+				scope.$broadcast('autoSave');
+			}, 5000, false);
+
+			element.bind('keypress', function(e) {
+				debounced();
+			});
 		}
 	};
 });

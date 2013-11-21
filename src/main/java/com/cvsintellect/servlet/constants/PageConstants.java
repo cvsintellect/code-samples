@@ -8,7 +8,6 @@ public interface PageConstants {
 	public static String LOGOUT_URL = "/user/logout";
 
 	public static String PROFILE_URL = "/user/view/profile";
-	public static String ENTRY_PARTIAL_URL = "/user/partial/profile";
 
 	public static String SETUP_LOGIN_GOOGLE_URL_USER = "/user/setuplogin/google";
 	public static String AUTHENTICATE_GOOGLE_URL_USER = "/user/authenticate/google";
@@ -32,5 +31,4 @@ public interface PageConstants {
 
 	public static String WELCOME_PAGE = "/jsp/Welcome.jsp";
 	public static String PROFILE_PAGE = "/jsp/UserProfile.jsp";
-	public static String ENTRY_PARTIAL_PAGE = "/jsp/partial/UserEntries.jsp";
 }

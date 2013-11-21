@@ -78,12 +78,16 @@ function EntryController($scope, $http) {
 		$scope.setServerUpdateFailedMessage(data);
 	}
 
+	$scope.isSame = function() {
+		return angular.equals($scope.entry, $scope.form);
+	}
+
 	$scope.isCancelDisabled = function() {
-		return $scope.isGlobalServerUpdateRunning() || angular.equals($scope.entry, $scope.form);
+		return $scope.isGlobalServerUpdateRunning() || $scope.isSame();
 	}
 
 	$scope.isSaveDisabled = function() {
-		return $scope.isGlobalServerUpdateRunning() || $scope.EntryForm.$invalid || angular.equals($scope.entry, $scope.form);
+		return $scope.isGlobalServerUpdateRunning() || $scope.EntryForm.$invalid || $scope.isSame();
 	}
 
 	$scope.moveUp = function() {
@@ -209,6 +213,11 @@ function EntryController($scope, $http) {
 	// initialize
 	$scope.$on('resetContentEditableModel', function() {
 		$scope.entry.text.value = $scope.form.text.value;
+	});
+
+	$scope.$on('autoSave', function() {
+		if (!$scope.isGlobalServerUpdateRunning() && !$scope.EntryForm.$invalid && !$scope.isSame())
+			$scope.save();
 	});
 
 	$scope.cancel();
