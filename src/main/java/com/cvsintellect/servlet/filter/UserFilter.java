@@ -18,8 +18,8 @@ import com.cvsintellect.db.dao.UserDataDAO;
 import com.cvsintellect.db.model.UserDTO;
 import com.cvsintellect.servlet.constants.KeyConstants;
 import com.cvsintellect.servlet.constants.PageConstants;
+import com.cvsintellect.servlet.util.GAELogger;
 import com.google.appengine.api.datastore.Key;
-import com.ji.rm.servlet.util.GAELogger;
 
 public final class UserFilter implements Filter {
 	private static final Logger LOG = Logger.getLogger(UserFilter.class.getName());

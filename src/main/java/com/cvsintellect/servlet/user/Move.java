@@ -16,8 +16,8 @@ import com.cvsintellect.db.model.UserDTO;
 import com.cvsintellect.servlet.constants.KeyConstants;
 import com.cvsintellect.servlet.constants.MessageConstants;
 import com.cvsintellect.servlet.constants.ResourceConstants;
+import com.cvsintellect.servlet.util.AjaxResponse;
 import com.google.appengine.api.datastore.Key;
-import com.ji.rm.servlet.util.AjaxResponse;
 
 public class Move extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package com.ji.rm.servlet.util;
+package com.cvsintellect.servlet.util;
 
 import java.io.IOException;
 import java.io.PrintWriter;

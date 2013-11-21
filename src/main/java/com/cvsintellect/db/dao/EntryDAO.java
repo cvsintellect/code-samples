@@ -11,9 +11,9 @@ import com.cvsintellect.common.util.DigestUtil;
 import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.model.EntryDTO;
 import com.cvsintellect.db.model.UserDTO;
+import com.cvsintellect.servlet.util.GAELogger;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import com.ji.rm.servlet.util.GAELogger;
 
 public class EntryDAO extends AbstractDAO {
 	private static final Logger LOG = Logger.getLogger(EntryDAO.class.getName());

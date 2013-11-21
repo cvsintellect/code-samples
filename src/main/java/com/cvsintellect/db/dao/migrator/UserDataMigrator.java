@@ -7,8 +7,8 @@ import javax.jdo.Transaction;
 
 import com.cvsintellect.db.dao.PMF;
 import com.cvsintellect.db.model.UserDTO;
+import com.cvsintellect.servlet.util.GAELogger;
 import com.google.appengine.api.datastore.Key;
-import com.ji.rm.servlet.util.GAELogger;
 
 public class UserDataMigrator {
 	private static final Logger LOG = Logger.getLogger(UserDataMigrator.class.getName());

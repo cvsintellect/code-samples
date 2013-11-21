@@ -14,12 +14,12 @@ import com.cvsintellect.common.util.DigestUtil;
 import com.cvsintellect.db.cache.CacheService;
 import com.cvsintellect.db.dao.migrator.UserDataMigrator;
 import com.cvsintellect.db.model.UserDTO;
+import com.cvsintellect.servlet.util.GAELogger;
+import com.cvsintellect.servlet.util.UserQuery;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
-import com.ji.rm.servlet.util.GAELogger;
-import com.ji.rm.servlet.util.UserQuery;
 
 public class UserDataDAO extends AbstractDAO {
 	private static final Logger LOG = Logger.getLogger(UserDataDAO.class.getName());

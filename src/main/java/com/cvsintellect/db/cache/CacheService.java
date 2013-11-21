@@ -9,6 +9,7 @@ import net.sf.jsr107cache.CacheFactory;
 import net.sf.jsr107cache.CacheManager;
 
 import com.cvsintellect.db.model.UserDTO;
+import com.cvsintellect.servlet.util.GAELogger;
 import com.google.appengine.api.capabilities.CapabilitiesService;
 import com.google.appengine.api.capabilities.CapabilitiesServiceFactory;
 import com.google.appengine.api.capabilities.Capability;
@@ -16,7 +17,6 @@ import com.google.appengine.api.capabilities.CapabilityStatus;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.memcache.jsr107cache.GCacheFactory;
-import com.ji.rm.servlet.util.GAELogger;
 
 public class CacheService {
 	private static final Logger LOG = Logger.getLogger(CacheService.class.getName());
