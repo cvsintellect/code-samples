@@ -1,6 +1,6 @@
 Entries:
 <button ng-click="addEntry()" ng-disabled="isAddEntryDisabled()" class="btn btn-info" id="position-add-button">+</button>
-<div ng-repeat="entry in userprofile.entries" ng-controller="EntryController" ng-animate="'repeat'">
+<div ng-repeat="entry in userprofile.entries" autosavable ng-controller="EntryController" ng-animate="'repeat'">
 	<form name="EntryForm" novalidate>
 		<span class="process-indicator {{getServerUpdateStatus(serverUpdateRunning, serverUpdateSuccessful, serverUpdateFailed)}}"></span>
 

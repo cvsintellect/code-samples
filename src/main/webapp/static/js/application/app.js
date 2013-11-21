@@ -11,7 +11,8 @@ app.config(function($routeProvider) {
 				var successCallback = function(result) {
 					if (angular.equals(result, [])) {
 						deferred.reject("Could not get user data!");
-					} else {
+					}
+					else {
 						deferred.resolve(result);
 					}
 				};
@@ -95,6 +96,12 @@ app.directive('autosavable', function(debounce) {
 			});
 		}
 	};
+});
+
+app.run(function($rootScope, $templateCache) {
+	$rootScope.$on('$viewContentLoaded', function() {
+		$templateCache.removeAll();
+	});
 });
 
 Array.prototype.move = function(old_index, new_index) {
