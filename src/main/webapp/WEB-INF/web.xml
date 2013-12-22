@@ -45,6 +45,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>RestAPIDelete</servlet-name>
 		<servlet-class>com.cvsintellect.servlet.user.Delete</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>latextopdf</servlet-name>
+		<servlet-class>com.cvsintellect.servlet.user.CreatePDFFromLatex</servlet-class>
+	</servlet>
 
 	<!-- URL mappings -->
 	<servlet-mapping>
@@ -74,6 +78,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>RestAPIDelete</servlet-name>
 		<url-pattern>/user/delete/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>latextopdf</servlet-name>
+		<url-pattern>/user/latextopdf</url-pattern>
 	</servlet-mapping>
 
 	<!-- welcome list -->

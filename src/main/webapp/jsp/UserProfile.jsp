@@ -26,6 +26,8 @@
 </head>
 
 <body>
+	<a href="/user/latextopdf">LaTeX To PDF</a>
+
 	<div class="container">
 		<div id='edit' class='resume_editor' style="width: 600px;">
 			<div ng-view id='ng-view'></div>
