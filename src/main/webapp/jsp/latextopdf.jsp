@@ -2,7 +2,7 @@
 <html>
 <body>
 	<form action="latextopdf" method="post">
-		<input type="text" name="compiler" value="latex" />
+		<input type="text" name="compiler" value="xelatex" />
 
 		<textarea name="texFile" rows="50" cols="100"></textarea>
 
